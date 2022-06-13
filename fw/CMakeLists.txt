@@ -7,4 +7,5 @@ target_link_directories(MSP INTERFACE ${MSP_INCLUDE})
 add_executable(fw main.cpp)
 target_link_libraries(fw PRIVATE
 	MSP
-	leds)
+	leds
+	hw_uart)

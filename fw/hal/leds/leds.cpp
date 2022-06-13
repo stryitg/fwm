@@ -12,7 +12,7 @@ void init()
 
 void toggle_green()
 {
-	P1DIR ^= BIT0;
+	P1OUT ^= BIT0;
 }
 
 }
