@@ -1,10 +1,15 @@
 #pragma once
 
-namespace leds
+namespace hal
 {
 
-void init();
+class leds
+{
+public:
+	leds() = delete;
 
-void toggle_green();
+	static void init();
+	static void toggle_green();
+};
 
 }

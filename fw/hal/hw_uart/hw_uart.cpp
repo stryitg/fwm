@@ -2,10 +2,10 @@
 
 #include <msp430g2553.h>
 
-namespace hw_uart
+namespace hal
 {
 
-void init()
+void hw_uart::init()
 {
 	P1SEL |= BIT2;
 	P1SEL2 |= BIT2;
@@ -22,7 +22,7 @@ void init()
 
 }
 
-void write(uint8_t c)
+void hw_uart::write(uint8_t c)
 {
 	while (!(IFG2 & UCA0TXIFG));
 
